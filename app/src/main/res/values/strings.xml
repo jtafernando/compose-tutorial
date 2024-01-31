@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Compose Tutorial</string>
+    <string name="title_activity_modifiers">Modifiers</string>
 </resources>
