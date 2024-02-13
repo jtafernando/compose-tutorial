@@ -1,6 +1,9 @@
 package com.example.composetutorial
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -8,13 +11,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class Modifiers {
 
@@ -74,11 +78,64 @@ class Modifiers {
                 .fillMaxHeight(0.5f)
                 .fillMaxWidth()
         ) {
-            Text("Hello", modifier = Modifier.offset(20.dp, 35.dp))
-            // Simply adds space between two composable(s). Adding a Modifier.height makes the spacing
+            Text("Hello")
+            // Simply adds space b/t 2 composable(s). Adding a Modifier.height makes the spacing
             // vertical. You can do the same thing with width and make the spacing horizontal.
+            // Like adding an invisible composable between the 2 composable(s).
             Spacer(modifier = Modifier.height(50.dp))
             Text("World")
+        }
+    }
+
+    @Composable
+    fun BorderModifier() {
+        Column(
+            modifier = Modifier
+                .background(Color.Cyan)
+                .fillMaxHeight(0.5f)
+                .fillMaxWidth()
+                .border(10.dp, Color.Red)
+                .padding(10.dp)
+                .border(10.dp, Color.hsl(32f, .82f, .56f))
+                .padding(10.dp)
+                .border(10.dp, Color.Yellow)
+                .padding(10.dp)
+                .border(10.dp, Color.Green)
+                .padding(10.dp)
+                .border(10.dp, Color.Blue)
+                .padding(10.dp)
+                .border(10.dp, Color.Magenta)
+                .padding(10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text("Hello", fontSize = 50.sp)
+        }
+    }
+
+    @Composable
+    fun ClickableModifier() {
+        Column(
+            modifier = Modifier
+                .background(Color.Cyan)
+                .fillMaxHeight()
+                .fillMaxWidth()
+                .border(10.dp, Color.Red)
+                .padding(10.dp)
+                .border(10.dp, Color.hsl(32f, .82f, .56f))
+                .padding(10.dp)
+                .border(10.dp, Color.Yellow)
+                .padding(10.dp)
+                .border(10.dp, Color.Green)
+                .padding(10.dp)
+                .border(10.dp, Color.Blue)
+                .padding(10.dp)
+                .border(10.dp, Color.Magenta)
+                .padding(10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text("Rainbow", fontSize = 50.sp, modifier = Modifier.clickable {})
         }
     }
 

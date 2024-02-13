@@ -13,20 +13,44 @@
         android:theme="@style/Theme.ComposeTutorial"
         tools:targetApi="31">
         <activity
-            android:name=".Modifiers"
-            android:exported="false"
-            android:label="@string/title_activity_modifiers"
-            android:theme="@style/Theme.ComposeTutorial" />
-        <activity
-            android:name=".RowsColumnsAndSizing"
+            android:name=".TextStylingActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_text_styling"
             android:theme="@style/Theme.ComposeTutorial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ImageCardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_image_card"
+            android:theme="@style/Theme.ComposeTutorial">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Modifiers"
+            android:exported="false"
+            android:label="@string/title_activity_modifiers"
+            android:theme="@style/Theme.ComposeTutorial" />
+        <activity
+            android:name=".RowsColumnsAndSizingActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeTutorial">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 
